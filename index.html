@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       
+</head>
+<style type="text/css">
+	/*$cd-btn:;
+	$cd-txt:;*/
+	#btn
+	{
+		margin: 10px;
+		background-color: #011C37;
+		color: #15DEA5;
+		font-size: 3rem;
+		cursor: pointer;
+		padding: 1.85rem 3rem;
+		font-size: 3rem;
+    border-radius: 10rem;
+    transition-property: transform;
+    transition-duration: 400ms;
+    /*transition: transform 400ms;*/
+    transform: scale(1);
+
+	}
+	#btn:hover 
+	{
+		transform :scale(1.15);
+	}
+	#btn1
+	{
+		margin: 10px;
+		background-color: #011C37;
+		color: #15DEA5;
+		font-size: 3rem;
+		cursor: pointer;
+		padding: 1.85rem 3rem;
+		font-size: 3rem;
+    border-radius: 10rem;
+    transition-property: transform;
+    transition-duration: 400ms;
+    /*transition: transform 400ms;*/
+    transform: scale(1);
+
+	}
+	#btn1:hover + .ball
+	{
+		transform :scale(1.15);
+	}
+	.ball {
+    width: 300px;
+    height: 300px;
+    background: olive;
+    margin-bottom: 1rem;
+    border-radius: 200px;
+    transform: scale(0.1);
+    transition: transform 4000ms;
+}
+	input
+	{
+		border: 2px solid #011C37;
+		border-radius: 100rem;
+		color:#6300A0;
+		font-family: 'Mostserrat', sans-serif;
+		font-size: 2.6rem;
+		outline: none;
+		padding: .5rem 1.5rem;
+		width: 100%;
+		transition: background-color 500ms;
+
+	}
+	input:focus
+	{
+		border: 2px solid #6300A0;
+	}
+	/*input:invalid
+	{
+		background: #b20A37;
+		border: 2px solid #b20A37;
+		color:#FFF;
+	}*/
+	input:not(:focus):invalid
+	{
+		background: #b20A37;
+		border: 2px solid #b20A37;
+		color:#FFF;
+	}
+	label
+	{
+		color:#6300A0;
+	}
+	#button
+	{
+		margin: 10px;
+		border:2px solid #011C37;
+		color: #15DEA5;
+		font-size: 3rem;
+		cursor: pointer;
+		padding: 1.85rem 3rem;
+		font-size: 3rem;
+    border-radius: 10rem;
+    transition:transform 400ms, background-color 300ms 150ms;
+    /*transition: transform 400ms;*/
+    transform: scale(1);
+	}
+	#button:hover
+	{
+		transform: scale(1.13);
+		background-color:   #011C37;
+	}
+	#boite{
+		width: 50px;
+		height: 50px;
+		background-color: orange;
+		transition: transform 1000ms ;
+		transition-timing-function: linear;
+	}
+	/*#boite:hover
+	{
+		transform: scale(1.13);
+	}*/
+</style>
+<body>
+	<div class="container">
+		<div  class="btn" id="btn" style="">
+			Vois comme je grandis !
+		</div>
+		<div>
+			
+			<div id="btn1"> c'est parti</div><div class="ball"></div>
+		</div>
+		
+
+		<div class="form">
+            <div class="form_group">
+                <label for="" >email</label>
+                <input type="email" name="" id="">
+            </div>
+        </div>
+        <div style="padding: 20px;">
+        	<div class="btn" id="button">
+        		Survole-moi
+        	</div>
+        </div>
+        <div style="padding: 20px;">
+        	<div class="btn" id="boite">
+        		
+        	</div>
+        </div>
+	</div>
+</body>
+</html>

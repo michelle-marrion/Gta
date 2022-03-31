@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style type="text/css">
+	.box1
+	{
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+		transition: transform 330ms ease-in-out;
+	}
+	.box2
+	{
+		width: 100px;
+		height: 100px;
+		background-color: orange;
+		transition: transform 330ms ease-in-out;
+	}
+	.box3
+	{
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		transition: transform 330ms ease-in-out;
+	}
+	.box4
+	{
+		width: 100px;
+		height: 100px;
+		background-color: purple;
+		transition: transform 330ms ease-in-out;
+	}
+	.box5
+	{
+		width: 100px;
+		height: 100px;
+		background-color: gray;
+		transition: transform 330ms ease-in-out;
+	}
+	.box6
+	{overflow: hidden;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		color: white;
+		text-align: center;
+		transform: scale(0.5);
+    	transition: transform 330ms ease-in-out;
+    	
+	}
+#btn1:hover + .box1
+{
+	transform: scale(2);
+}
+	#btn2:hover + .box2
+{
+	transform: scale(2, 0.5);
+}
+	#btn3:hover + .box3
+{
+	transform: scaleX(2);
+}
+	#btn4:hover + .box4
+{
+	transform: translate(150px, -7vh);
+}
+#btn5:hover + .box5
+{
+	transform: translate(100px, 0);
+}
+	#btn6:hover + .box6
+{
+	transform: scale(1) ;
+	/*translate(100px, 0)*/
+}
+	.btn6:hover + span
+{
+    transform: translateY(0);
+}
+span {
+        display: inline-block;
+        transform: translateY(250%);
+        transition: transform 280ms ease-out 50ms;
+    }
+
+#box1
+{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	color: white;
+	transform: rotate(-360deg);
+     transition: transform 500ms ease-in-out;
+	/*transition: transform 330ms ease-in-out;	*/
+}
+#box2
+{
+	width: 100px;
+	height: 100px;
+	/*background-color: pink;*/
+	 background: pink;
+        transform: rotate(-1turn);
+        transition: transform 500ms ease-in-out;
+	transition: transform 330ms ease-in-out;	
+}
+#btn7:hover + .base1
+{
+	transform: rotate(0deg);
+}
+#btn7:hover + .base2
+{
+	transform: rotate(0turn);
+}
+#box8
+{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	color: white;
+	transform: rotate(-360deg);
+     transition: transform 500ms ease-in-out;
+	/*transition: transform 330ms ease-in-out;	*/
+}
+</style>
+<body>
+	<div class="container" style="padding: 50px;">
+		<div class="col-md-3">
+			<div class="btn btn-info"  id="btn1">btn1</div>
+			<div class="box1" style="margin: 50px"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn btn-primary"  id="btn2">btn2</div>
+			<div class="box2" style="margin: 50px"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn btn-danger"  id="btn3">btn3</div>
+			<div class="box3" style="margin: 50px"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn btn-warning"  id="btn4">btn4</div>
+			<div class="box4" style="margin: 50px"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn btn-success"  id="btn5">btn5</div>
+			<div class="box5" style="margin: 50px"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn btn-info" id="btn6">btn6</div>
+    	    <div class="box6" style="margin: 50px;">
+        		<span>Boop!</span>
+    		</div>
+		</div>
+		<div class="col-md-6">
+			<div class="btn btn-danger" id="btn7">btn7</div>
+		    
+		        <div class="base1 boxes--rotDegrees col-md-3" id="box1">rotate(360deg)</div>
+		        <!-- <div class="col-md-1"></div>
+		        <div class="base2 boxes--rotTurns  col-md-3" id="box2">rotate(1turn)</div> --> 
+		</div>
+		<div class="col-md-6">
+			<div class="btn btn-info" id="btn8">btn6</div>
+    	    <div class="box8" style="margin: 50px;">
+        		<span>Boop!</span>
+    		</div>
+		</div>
+		
+		<!-- style="padding: 50px" -->
+		
+	</div>
+</body>
+</html>

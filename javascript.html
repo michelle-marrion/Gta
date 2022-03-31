@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+</head>
+<body>
+	<script type="text/javascript">
+		alert('Hello World');
+		window.alert('Bonjour le monde');
+		var text = 'Variable Globale !';
+		(function()
+		{
+			var text = 'Variable locale !';
+			console.log(text);//variable locale qui sera affiché
+			console.log(window.text);// VARIABLE GLOBALE
+		})();
+
+		(function() 
+		{ // On utilise une IEF pour « isoler » du code
+			text = 'Variable accessible !'; // Cette variable n'a jamais été déclarée et pourtant on lui attribue une valeur
+		})();
+		console.log(text); // Affiche : « Variable accessible ! »
+		console.log(window.text);
+		
+	</script>
+	<div id="myDiv">
+			<p >
+				un peu de texte <a >et un lien</a>
+				<span id="myparagraphe"></span>
+			</p>
+	</div>
+	<script>
+		var div = document.getElementById('myDiv');
+		console.log(div);
+		alert(document.getElementById('myparagraphe'));
+	</script>
+	<div id="menu">
+		<div class="item">
+			<span>Élément 1</span>
+			<span>Élément 2</span>
+		</div>
+		<div class="publicite">
+			<span>Élément 3</span>
+			<span>Élément 4</span>
+		</div>
+		</div>
+		<div id="contenu">
+			<span>Introduction au contenu de la page...</span>
+		</div>
+		<script>
+			var query =document.querySelector('#menu .item span');
+			queryAll = document.querySelectorAll('#menu .publicite span');
+
+			console.log(query.innerHTML);
+			// console.log(queryAll.innerHTML);
+			console.log(queryAll.length);
+			console.log(queryAll[0].innerHTML+'-'+queryAll[1].innerHTML);
+
+			var count = queryAll.length; 
+			for (let i = 0; i < queryAll.length; i++) {
+				console.log(queryAll[i]);
+				
+			}
+			alert(div.innerHTML);
+			alert(div.innerText);
+		</script>
+		<a id="myLink" href="http://unlien.com">un lien modifier dynamiquement</a>
+		<script>
+			var link = document.getElementById('myLink');
+			var href = link.getAttribute('href');
+
+			alert(href);
+			link.href = 'http://www.siteduzero.com';
+			// link.setAttribute('href','http://www.siteduzero.com');
+		</script>
+
+<!-- manipuler le code Html -->
+<blockquote>
+	<p id="myP">Ceci est un paragraphe</p>
+</blockquote>
+<script>
+	var paragraph = document.getElementById('myP');
+	alert(paragraph.nodeType + '\n\n' +
+paragraph.nodeName.toLowerCase());
+	console.log(paragraph);
+	var blockquote = paragraph.parentNode;
+	console.log(blockquote);
+</script>
+<div>
+	<p id="myp">Un peu de texte, <a>un lien</a> et <strong>une portion en emphase</strong></p>
+	</div>
+	<script>
+	var paragraph = document.getElementById('myp');
+	var first = paragraph.firstChild;//recupère le prmier élément 
+	var last = paragraph.lastChild;
+	alert(first.nodeName.toLowerCase());
+	alert(first.nodeValue);
+	alert(last.nodeName.toLowerCase());
+	alert(last.firstChild.data);
+
+	var paragraph = document.getElementById('myp');
+var children = paragraph.childNodes;
+for (var i = 0, c = children.length; i < c; i++) {
+if (children[i].nodeType === 1) { // C'est un élément HTML
+console.log(children[i].firstChild.data);
+} else { // C'est certainement un noeud textuel
+console.log(children[i].data);
+}
+}
+	</script>
+	<script>
+		var newLink = document.createElement('a');
+		newLink.id = 'sdz_link';
+		newLink.href = 'http:/:www.siteduzero.com';
+		newLink.title = 'Découvrez le site du zéro !';
+		newLink.setAttribute('tabindex', '10');
+		document.getElementById('myP').appendChild(newLink); 
+	</script>
+</body>
+</html>
